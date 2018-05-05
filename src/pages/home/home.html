@@ -1,22 +1,31 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
       Ionic Blank
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
+<ion-content >
+  <p >Spp Sonidos</p>
+
   <p>
   <ion-list>
-    <ion-item>
-      <ion-avatar item-start>
-        <img src="img/avatar-cher.png">
+
+    <ion-item *ngFor="let animal of animales" (click)="reproducir(animal)">
+
+      <ion-avatar item-left>
+        <img [src]="animal.imagen">
       </ion-avatar>
-      <h2>Cher</h2>
-      <p>Ugh. As if.</p>
+
+      <h2>{{animal.nombre}}</h2>
+      
+      <ion-icon ion-icon name="play" item-right *ngIf="isPlay(animal)"></ion-icon>
+
+      <ion-icon name="pause" item-right *ngIf="isStop(animal)"></ion-icon>
+
     </ion-item>
+
   </ion-list>
   </p>
 </ion-content>

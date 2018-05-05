@@ -1,6 +1,6 @@
 {
   "name": "soundsApp",
-  "app_id": "",
+  "app_id": "bcd43a5f",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
